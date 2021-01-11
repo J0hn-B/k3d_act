@@ -11,4 +11,10 @@ The goal is to run the same configuration locally and in GitHub Actions with zer
 **Do this:** ![image](images/bash.png)
 **Not this:** ![image](images/github_actions.png)
 
-# Run GitHub Actions workflows locally
+## Run GitHub Actions workflows locally
+
+I am sure you know how to write a script to build your application.
+Lets build a cluster to deploy and test it.  
+```act -r``` will deploy the cluster the first time, will update the cluster every time you change your code.
+
+![image](images/act_.gif)

@@ -2,7 +2,7 @@
 
 At the time of writing the most preferred method is [nektos/act](https://github.com/nektos/act)  
 Act is a great tool but it is not perfect, not yet.  
-Have in mind, there is strong possibility you will plan to migrate from GitHub Actions
+Bear in mind, there is strong possibility you will plan to migrate from GitHub Actions
 to something new in the next 24/36 months.
 
 What you need is to avoid a vendor lock-in by using the vendor-specific tools/language they provide.

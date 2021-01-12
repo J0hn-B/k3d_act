@@ -13,8 +13,8 @@ The goal is to run the same configuration locally and in GitHub Actions with zer
 
 ## Run GitHub Actions workflows locally
 
-Create a k3d environment to deploy the app:
-```act -r``` will deploy the cluster the first time.
+Create a k3d environment to deploy the app:  
+```act -r``` will deploy the cluster the first time.  
 The next time you run ```act -r``` your cluster will update.
 
 ![image](images/act_.gif)

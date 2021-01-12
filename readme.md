@@ -15,11 +15,13 @@ The goal is to run the same configuration locally and in GitHub Actions with zer
 
 ## Run GitHub Actions workflows locally
 
-Create a k3d environment:  
+Create a k3d environment and deploy Drupal as an example application:  
 ```act -r``` will deploy the cluster the first time.  
-The next time you run ```act -r``` your cluster will update.
+> The next time you run ```act -r``` your cluster will update.
 
-![image](images/act_.gif)
+![image](images/act__.gif)  
+
+![image](images/act_docker.gif)
 
 ## Install
 
@@ -34,7 +36,7 @@ The next time you run ```act -r``` your cluster will update.
 
 4) ```act -r```  deploy for first time
 
-5) From your editor go to .github/workflows/k3d_runner.yml and uncomment **Install Helm charts** action.  
+5) From your editor go to ```.github/workflows/k3d_runner.yml``` and uncomment **Install Helm charts** action.  
 
 6) ```act -r```  update the cluster
 

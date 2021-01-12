@@ -16,9 +16,9 @@ jobs:
         run: scripts/k3d_cluster.sh
         shell: bash
 
-      - name: Install Helm charts
-        run: scripts/helm_charts.sh
-        shell: bash
+      # - name: Install Helm charts
+      #   run: scripts/helm_charts.sh
+      #   shell: bash
 
       - name: Deploy app (testing app is Drupal)
         run: |

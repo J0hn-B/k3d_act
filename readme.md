@@ -1,5 +1,7 @@
 # How to run GitHub Actions workflows locally?
 
+![Test with K3d](https://github.com/J0hn-B/k3d_act/workflows/Test%20with%20K3d/badge.svg)
+
 At the time of writing the most preferred method is [nektos/act](https://github.com/nektos/act)  
 Act is a great tool but it is not perfect, not yet.  
 Bear in mind, there is strong possibility you will plan to migrate from GitHub Actions

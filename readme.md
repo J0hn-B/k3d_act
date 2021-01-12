@@ -20,3 +20,24 @@ Create a k3d environment:
 The next time you run ```act -r``` your cluster will update.
 
 ![image](images/act_.gif)
+
+## Install
+
+> You must have docker installed.
+
+1) Install act: <https://github.com/nektos/act#installation>
+
+2) Fork or git clone the repo:  
+    ```git clone https://github.com/J0hn-B/k3d_act.git```  
+
+3) ```cd k3d_act```  
+
+4) ```act -r```  deploy for first time
+
+5) From your editor go to .github/workflows/k3d_runner.yml and uncomment **Install Helm charts** action.  
+
+6) ```act -r```  update the cluster
+
+7) Push to your repo and check the actions tab.
+
+![github_action_pass](images/github_action_pass.png)

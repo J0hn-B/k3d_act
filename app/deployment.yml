@@ -1,0 +1,47 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: drupal
+  namespace: drupal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: drupal
+  template:
+    metadata:
+      labels:
+        app: drupal
+    spec:
+      containers:
+        - name: drupal
+          image: "drupal:8.8-apache"
+          ports:
+            - containerPort: 80
+          livenessProbe:
+            tcpSocket:
+              port: 80
+            initialDelaySeconds: 60
+          readinessProbe:
+            tcpSocket:
+              port: 80
+            initialDelaySeconds: 30
+          volumeMounts:
+            - mountPath: /var/www/html/sites/default/
+              name: drupal-settings
+            - mountPath: /var/www/html/sites/default/files/
+              name: drupal-files
+          resources:
+            limits:
+              cpu: "1"
+              memory: "512Mi"
+            requests:
+              cpu: "500m"
+              memory: "256Mi"
+      volumes:
+        - name: drupal-settings
+          configMap:
+            name: drupal-config
+        - name: drupal-files
+          persistentVolumeClaim:
+            claimName: drupal-files-pvc

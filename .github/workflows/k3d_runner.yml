@@ -15,3 +15,13 @@ jobs:
       - name: Prerare the K3d development environment
         run: scripts/k3d_cluster.sh
         shell: bash
+
+      - name: Install Helm charts
+        run: scripts/helm_charts.sh
+        shell: bash
+
+      - name: Deploy app (testing app is Drupal)
+        run: |
+          kubectl cluster-info
+          kubectl create namespace drupal --dry-run=client -o yaml | kubectl apply -f -
+          kubectl apply -f app/
